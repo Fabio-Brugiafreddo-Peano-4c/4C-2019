@@ -17,7 +17,7 @@ public class Inc1000 extends Thread {
     static int count;
 
     @Override
-    public synchronized void run() {
+    public synchronized void start() {
         for (count = 0; count < 1000; count++) {
 
             try {
@@ -26,7 +26,7 @@ public class Inc1000 extends Thread {
                 Logger.getLogger(Inc1000.class.getName()).log(Level.SEVERE, null, ex);
 
             }
-            System.out.println(count);
+            
         }
     }
 

@@ -5,6 +5,8 @@
  */
 package conflitto;
 
+import static conflitto.Inc1000.count;
+
 /**
  *
  * @author brugiafreddo.fabio
@@ -19,6 +21,7 @@ public class Conflitto {
         Inc10002 i2 = new Inc10002();
         i.start();
         i2.start();
+        System.out.println(count);
     }
     
 }

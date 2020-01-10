@@ -14,9 +14,10 @@ import java.util.logging.Logger;
  * @author brugiafreddo.fabio
  */
 public class Inc10002 extends Thread {
-     @Override
-    public synchronized void run(){
-        for (count = 0; count < 1000; count++) {
+
+    @Override
+    public synchronized void start() {
+        for (int i = count; count < 2000; count++) {
 
             try {
                 Thread.sleep(1);
@@ -24,7 +25,7 @@ public class Inc10002 extends Thread {
                 Logger.getLogger(Inc1000.class.getName()).log(Level.SEVERE, null, ex);
 
             }
-            System.out.println(count);
+            
         }
     }
 }
