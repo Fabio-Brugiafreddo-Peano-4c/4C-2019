@@ -3,25 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hihello;
-
-import javax.swing.JOptionPane;
+package ciaohihello;
 
 /**
  *
- * @author brugiafreddo.fabio
+ * @author tancau.andrei
  */
 public class Say extends Thread{
-
-    public Say() {
+    String cosaDire;
+    public Say(String cosaDire) {
+        this.cosaDire=cosaDire;
     }
-     
     
-    @Override
-    public void run(){
+    public void start(){
         for (int i = 0; i < 10; i++) {
-             System.out.println("ciao");
-            
+            System.out.println(cosaDire);       
         }
-}
+    }
 }
