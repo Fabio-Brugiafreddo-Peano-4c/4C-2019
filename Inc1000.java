@@ -18,8 +18,8 @@ public class Inc1000 extends Thread {
 
     @Override
     public synchronized void start() {
-        for (count = 0; count < 1000; count++) {
-
+        for (int i = 0; i < 1000; i++) {
+            inc1();
             try {
                 Thread.sleep(1);
             } catch (InterruptedException ex) {
@@ -29,5 +29,7 @@ public class Inc1000 extends Thread {
             
         }
     }
-
+ private synchronized void inc1(){
+        count++;
+    }
 }
